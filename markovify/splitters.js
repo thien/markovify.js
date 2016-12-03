@@ -55,11 +55,14 @@ function split_into_sentences(text) {
         // console.log(text);
         var matches = text.match(/[^.!?\s][^.!?]*(?:[.!?](?!['"]?\s|$)[^.!?]*)*[.!?]?['"]?(?=\s|$)/g);
         var sentences = [];
-        for (var i = 0; i < matches.length; i++) {
+        if (typeof matches == undefined ){
+            return [""];
+        } else {
+            for (var i = 0; i < matches.length; i++) {
             sentences.push(matches[i]);
         }
-        // console.log(sentences);
         return sentences;
+        }
     }
     return text;
 }
