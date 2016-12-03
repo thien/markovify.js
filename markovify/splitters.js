@@ -48,6 +48,7 @@ function is_sentence_ender(word) {
 }
 
 function split_into_sentences(text) {
+    text += ".";
     var potential_end_pat = new RegExp(/([\w\.'’&\]\)]+([\.\?!]+))/g);
     var matches = text.match(potential_end_pat);
     var sentences = [];
@@ -55,10 +56,11 @@ function split_into_sentences(text) {
     for (var i = 0; i < matches.length; i++) {
         if (is_sentence_ender(matches[i])) {
             var index = text.indexOf(matches[i]) + matches[i].length;
-            console.log(text.slice(prevIndex,index));
             sentences.push(text.slice(prevIndex,index).trim());
             prevIndex = index;
         }
     }
     return sentences;
 }
+
+exports.split_into_sentences = split_into_sentences;
