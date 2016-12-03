@@ -38,6 +38,15 @@ class Chain {
 }
 
 function markov(chain){
+	function random(value){
+		var result;
+	    var count = 0;
+	    for (var prop in value)
+	        if (Math.random() < 1/++count)
+	           result = prop;
+	    return result;
+	}
+
 	// chain is an array of arrays
 	// chain.corpus is the entire corpus
 
@@ -45,39 +54,20 @@ function markov(chain){
 	var start_size = chain.start.length;
 	// console.log("the size of the starts is " + start_size);
 	var start_item = Math.floor((Math.random() * start_size) + 0);
-	start_item = chain.start[start_item];
+	key = chain.start[start_item];
+	var output = "";
 
-	// console.log("the chosen start item is " + start_item);
-	console.log(link(chain,start_item));
-}
-
-function random(value){
-	var result;
-    var count = 0;
-    for (var prop in value)
-        if (Math.random() < 1/++count)
-           result = prop;
-    return result;
-}
-
-function link(chain, key){
-	// check if key exists
-	// console.log("key:"+ key);
-	// console.log(chain.corpus[key]);
-	console.log(key);
-	if (chain.corpus[key]){
-		// console.log("key exists");
-
-		var rand_item = random(chain.corpus[key]);
-		// randomly choose it's key contents.
-		var next = chain.corpus[key][rand_item];
-
-		// console.log(next);
-		link(chain,next);
-	} else {
-		// console.log(key + " doesnt exist");
-		return key;
+	while (key in chain.corpus){
+		output += key + " ";
+		// console.log(key);
+		if (chain.corpus[key]){
+			// output += key;
+			var rand_item = random(chain.corpus[key]);
+			// randomly choose it's key contents.
+			var key = chain.corpus[key][rand_item];
+		}
 	}
+	return output;
 }
 
 var test = [
@@ -85,6 +75,7 @@ var test = [
     "Free the slaves",
     "I am a number of things"
 ];
+
 var c = new Chain(test);
 var x = markov(c);
-
+console.log(x);
