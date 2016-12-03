@@ -1,0 +1,119 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/7.1.0/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'git://github.com/tnguyen/markovify.js.git' ]
+2 info using npm@3.10.9
+3 info using node@v7.1.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData git://github.com/tnguyen/markovify.js.git
+8 silly fetchOtherPackageData git://github.com/tnguyen/markovify.js.git
+9 silly cache add args [ 'git://github.com/tnguyen/markovify.js.git', null ]
+10 verbose cache add spec git://github.com/tnguyen/markovify.js.git
+11 silly cache add parsed spec Result {
+11 silly cache add   raw: 'git://github.com/tnguyen/markovify.js.git',
+11 silly cache add   scope: null,
+11 silly cache add   escapedName: null,
+11 silly cache add   name: null,
+11 silly cache add   rawSpec: 'git://github.com/tnguyen/markovify.js.git',
+11 silly cache add   spec: 'git://github.com/tnguyen/markovify.js.git',
+11 silly cache add   type: 'hosted',
+11 silly cache add   hosted:
+11 silly cache add    { type: 'github',
+11 silly cache add      ssh: 'git@github.com:tnguyen/markovify.js.git',
+11 silly cache add      sshUrl: 'git+ssh://git@github.com/tnguyen/markovify.js.git',
+11 silly cache add      httpsUrl: 'git+https://github.com/tnguyen/markovify.js.git',
+11 silly cache add      gitUrl: 'git://github.com/tnguyen/markovify.js.git',
+11 silly cache add      shortcut: 'github:tnguyen/markovify.js',
+11 silly cache add      directUrl: 'https://raw.githubusercontent.com/tnguyen/markovify.js/master/package.json' } }
+12 verbose addRemoteGit caching git://github.com/tnguyen/markovify.js.git
+13 verbose addRemoteGit git://github.com/tnguyen/markovify.js.git is a repository hosted by github
+14 silly tryClone cloning git://github.com/tnguyen/markovify.js.git via git://github.com/tnguyen/markovify.js.git
+15 verbose tryClone git-github-com-tnguyen-markovify-js-git-88ab4824 not in flight; caching
+16 verbose correctMkdir /Users/tn/.npm/_git-remotes correctMkdir not in flight; initializing
+17 info git [ 'clone',
+17 info git   '--template=/Users/tn/.npm/_git-remotes/_templates',
+17 info git   '--mirror',
+17 info git   'git://github.com/tnguyen/markovify.js.git',
+17 info git   '/Users/tn/.npm/_git-remotes/git-github-com-tnguyen-markovify-js-git-88ab4824' ]
+18 verbose mirrorRemote git://github.com/tnguyen/markovify.js.git git clone git://github.com/tnguyen/markovify.js.git
+19 verbose correctMkdir /Users/tn/.npm/_git-remotes correctMkdir not in flight; initializing
+20 verbose setPermissions git://github.com/tnguyen/markovify.js.git set permissions on /Users/tn/.npm/_git-remotes/git-github-com-tnguyen-markovify-js-git-88ab4824
+21 verbose resolveHead git://github.com/tnguyen/markovify.js.git original treeish: master
+22 info git [ 'rev-list', '-n1', 'master' ]
+23 silly resolveHead git://github.com/tnguyen/markovify.js.git resolved treeish: 0e7887f02a35d853fcfe9a450b2363f0a31a295e
+24 verbose resolveHead git://github.com/tnguyen/markovify.js.git resolved Git URL: git://github.com/tnguyen/markovify.js.git#0e7887f02a35d853fcfe9a450b2363f0a31a295e
+25 silly resolveHead Git working directory: /var/folders/mj/_bkvqk11719cz3fgtz_rjdv80000gn/T/npm-83136-48e91587/git-cache-6bd40266/0e7887f02a35d853fcfe9a450b2363f0a31a295e
+26 info git [ 'clone',
+26 info git   '/Users/tn/.npm/_git-remotes/git-github-com-tnguyen-markovify-js-git-88ab4824',
+26 info git   '/var/folders/mj/_bkvqk11719cz3fgtz_rjdv80000gn/T/npm-83136-48e91587/git-cache-6bd40266/0e7887f02a35d853fcfe9a450b2363f0a31a295e' ]
+27 verbose cloneResolved git://github.com/tnguyen/markovify.js.git clone Cloning into '/var/folders/mj/_bkvqk11719cz3fgtz_rjdv80000gn/T/npm-83136-48e91587/git-cache-6bd40266/0e7887f02a35d853fcfe9a450b2363f0a31a295e'...
+27 verbose cloneResolved done.
+28 info git [ 'checkout', '0e7887f02a35d853fcfe9a450b2363f0a31a295e' ]
+29 verbose checkoutTreeish git://github.com/tnguyen/markovify.js.git checkout Note: checking out '0e7887f02a35d853fcfe9a450b2363f0a31a295e'.
+29 verbose checkoutTreeish
+29 verbose checkoutTreeish You are in 'detached HEAD' state. You can look around, make experimental
+29 verbose checkoutTreeish changes and commit them, and you can discard any commits you make in this
+29 verbose checkoutTreeish state without impacting any branches by performing another checkout.
+29 verbose checkoutTreeish
+29 verbose checkoutTreeish If you want to create a new branch to retain commits you create, you may
+29 verbose checkoutTreeish do so (now or later) by using -b with the checkout command again. Example:
+29 verbose checkoutTreeish
+29 verbose checkoutTreeish   git checkout -b <new-branch-name>
+29 verbose checkoutTreeish
+29 verbose checkoutTreeish HEAD is now at 0e7887f... created exports
+30 info git [ 'submodule', '-q', 'update', '--init', '--recursive' ]
+31 verbose updateSubmodules git://github.com/tnguyen/markovify.js.git submodule update
+32 verbose addLocalDirectory /Users/tn/.npm/markovify.js/0.0.1/package.tgz not in flight; packing
+33 verbose correctMkdir /Users/tn/.npm correctMkdir not in flight; initializing
+34 verbose tar pack [ '/Users/tn/.npm/markovify.js/0.0.1/package.tgz',
+34 verbose tar pack   '/var/folders/mj/_bkvqk11719cz3fgtz_rjdv80000gn/T/npm-83136-48e91587/git-cache-6bd40266/0e7887f02a35d853fcfe9a450b2363f0a31a295e' ]
+35 verbose tarball /Users/tn/.npm/markovify.js/0.0.1/package.tgz
+36 verbose folder /var/folders/mj/_bkvqk11719cz3fgtz_rjdv80000gn/T/npm-83136-48e91587/git-cache-6bd40266/0e7887f02a35d853fcfe9a450b2363f0a31a295e
+37 verbose addLocalTarball adding from inside cache /Users/tn/.npm/markovify.js/0.0.1/package.tgz
+38 verbose correctMkdir /Users/tn/.npm correctMkdir not in flight; initializing
+39 verbose addRemoteGit data._from: git://github.com/tnguyen/markovify.js.git
+40 verbose addRemoteGit data._resolved: git://github.com/tnguyen/markovify.js.git#0e7887f02a35d853fcfe9a450b2363f0a31a295e
+41 silly cache afterAdd markovify.js@0.0.1
+42 verbose afterAdd /Users/tn/.npm/markovify.js/0.0.1/package/package.json not in flight; writing
+43 verbose correctMkdir /Users/tn/.npm correctMkdir not in flight; initializing
+44 verbose afterAdd /Users/tn/.npm/markovify.js/0.0.1/package/package.json written
+45 silly install normalizeTree
+46 silly loadCurrentTree Finishing
+47 silly loadIdealTree Starting
+48 silly install loadIdealTree
+49 silly cloneCurrentTree Starting
+50 silly install cloneCurrentTreeToIdealTree
+51 silly cloneCurrentTree Finishing
+52 silly loadShrinkwrap Starting
+53 silly install loadShrinkwrap
+54 silly loadShrinkwrap Finishing
+55 silly loadAllDepsIntoIdealTree Starting
+56 silly install loadAllDepsIntoIdealTree
+57 silly rollbackFailedOptional Starting
+58 silly rollbackFailedOptional Finishing
+59 silly runTopLevelLifecycles Finishing
+60 silly install printInstalled
+61 verbose stack Error: Refusing to install markovify.js as a dependency of itself
+61 verbose stack     at checkSelf (/usr/local/lib/node_modules/npm/lib/install/validate-args.js:53:14)
+61 verbose stack     at Array.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
+61 verbose stack     at LOOP (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
+61 verbose stack     at chain (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:20:5)
+61 verbose stack     at /usr/local/lib/node_modules/npm/lib/install/validate-args.js:16:5
+61 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:52:35
+61 verbose stack     at Array.forEach (native)
+61 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:52:11
+61 verbose stack     at Array.forEach (native)
+61 verbose stack     at asyncMap (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:51:8)
+62 verbose cwd /Volumes/Soodibus/Github/markovify.js
+63 error Darwin 16.1.0
+64 error argv "/usr/local/Cellar/node/7.1.0/bin/node" "/usr/local/bin/npm" "install" "git://github.com/tnguyen/markovify.js.git"
+65 error node v7.1.0
+66 error npm  v3.10.9
+67 error code ENOSELF
+68 error Refusing to install markovify.js as a dependency of itself
+69 error If you need help, you may report this error at:
+69 error     <https://github.com/npm/npm/issues>
+70 verbose exit [ 1, true ]

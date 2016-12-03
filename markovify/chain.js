@@ -8,7 +8,7 @@ class Chain {
     }
 
     loadData(data) {
-        console.log("Start loading data");
+        // console.log("Start loading data");
         for (var i = 0; i < data.length; i++) {
             var sentences = splitters.split_into_sentences(data[i]);
             for (var n = 0; n < sentences.length; n++) {
