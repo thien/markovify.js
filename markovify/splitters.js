@@ -48,20 +48,20 @@ function is_sentence_ender(word) {
 }
 
 function split_into_sentences(text) {
+    console.log("------")
     text = text.replace(/['"]+/g, '');
-    text += ".";
-    var potential_end_pat = new RegExp(/([\w\.'’&\]\)]+([\.\?!]+))/g);
-    var matches = text.match(potential_end_pat);
-    var sentences = [];
-    var prevIndex = 0;
-    for (var i = 0; i < matches.length; i++) {
-        if (is_sentence_ender(matches[i])) {
-            var index = text.indexOf(matches[i]) + matches[i].length;
-            sentences.push(text.slice(prevIndex,index).trim());
-            prevIndex = index;
+    if (text != ""){
+        text += ".";
+        console.log(text);
+        var matches = text.match(/[^.!?\s][^.!?]*(?:[.!?](?!['"]?\s|$)[^.!?]*)*[.!?]?['"]?(?=\s|$)/g);
+        var sentences = [];
+        for (var i = 0; i < matches.length; i++) {
+            sentences.push(matches[i]);
         }
+        console.log(sentences);
+        return sentences;
     }
-    return sentences;
+    return text;
 }
 
 exports.split_into_sentences = split_into_sentences;

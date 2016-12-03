@@ -1,20 +1,84 @@
 {
-  "name": "markovify.js",
-  "version": "0.0.2",
+  "_args": [
+    [
+      {
+        "raw": "markovify.js",
+        "scope": null,
+        "escapedName": "markovify.js",
+        "name": "markovify.js",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Volumes/Soodibus/Github/nightsoil"
+    ]
+  ],
+  "_from": "markovify.js@latest",
+  "_id": "markovify.js@0.0.2",
+  "_inCache": true,
+  "_location": "/markovify.js",
+  "_nodeVersion": "7.1.0",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/markovify.js-0.0.2.tgz_1480775815655_0.565030092606321"
+  },
+  "_npmUser": {
+    "name": "thien",
+    "email": "me@thien.io"
+  },
+  "_npmVersion": "3.10.9",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "markovify.js",
+    "scope": null,
+    "escapedName": "markovify.js",
+    "name": "markovify.js",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/markovify.js/-/markovify.js-0.0.2.tgz",
+  "_shasum": "4dafe8a2c05e3ee9437699230fa5b6f54d40bfcd",
+  "_shrinkwrap": null,
+  "_spec": "markovify.js",
+  "_where": "/Volumes/Soodibus/Github/nightsoil",
+  "author": {
+    "name": "Thien Nguyen & James Paterson"
+  },
+  "bugs": {
+    "url": "https://github.com/tnguyen/markovify.js/issues"
+  },
+  "dependencies": {},
   "description": "A simple javascript Markov Chain for text",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "4dafe8a2c05e3ee9437699230fa5b6f54d40bfcd",
+    "tarball": "https://registry.npmjs.org/markovify.js/-/markovify.js-0.0.2.tgz"
+  },
+  "gitHead": "ea4674b223228e158de39f54f643f2d4ec6a6cc6",
+  "homepage": "https://github.com/tnguyen/markovify.js#readme",
+  "license": "MIT",
   "main": "index.js",
+  "maintainers": [
+    {
+      "name": "thien",
+      "email": "me@thien.io"
+    }
+  ],
+  "name": "markovify.js",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tnguyen/markovify.js.git"
   },
-  "author": "Thien Nguyen & James Paterson",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/tnguyen/markovify.js/issues"
-  },
-  "homepage": "https://github.com/tnguyen/markovify.js#readme",
-  "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^3.2.0"
-  }
+  "scripts": {},
+  "version": "0.0.3"
 }
