@@ -2,11 +2,11 @@ var ascii_lowercase = "abcdefghijklmnopqrstuvwxyz";
 var ascii_uppercase = ascii_lowercase.toUpperCase().split(/(?!$)/u);
 var exceptions = "U.S.|U.N.|E.U.|F.B.I.|C.I.A.".split("|");
 var abbr_capped = [
-    "ala|ariz|ark|calif|colo|conn|del|fla|ga|ill|ind|kan|ky|la|md|mass|mich|minn|miss|mo|mont|neb|nev|okla|ore|pa|tenn|vt|va|wash|wis|wyo", 
+    "ala|ariz|ark|calif|colo|conn|del|fla|ga|ill|ind|kan|ky|la|md|mass|mich|minn|miss|mo|mont|neb|nev|okla|ore|pa|tenn|vt|va|wash|wis|wyo",
     "u.s",
-    "mr|ms|mrs|msr|dr|gov|pres|sen|sens|rep|reps|prof|gen|messrs|col|sr|jf|sgt|mgr|fr|rev|jr|snr|atty|supt", 
-    "ave|blvd|st|rd|hwy", 
-    "jan|feb|mar|apr|jun|jul|aug|sep|sept|oct|nov|dec", 
+    "mr|ms|mrs|msr|dr|gov|pres|sen|sens|rep|reps|prof|gen|messrs|col|sr|jf|sgt|mgr|fr|rev|jr|snr|atty|supt",
+    "ave|blvd|st|rd|hwy",
+    "jan|feb|mar|apr|jun|jul|aug|sep|sept|oct|nov|dec",
     ascii_lowercase.split(/(?!$)/u).join("|")
 ].join("|").split("|");
 var abbr_lowercase = "etc|v|vs|viz|al|pct".split("|")
@@ -48,6 +48,7 @@ function is_sentence_ender(word) {
 }
 
 function split_into_sentences(text) {
+    text = text.replace(/['"]+/g, '');
     text += ".";
     var potential_end_pat = new RegExp(/([\w\.'’&\]\)]+([\.\?!]+))/g);
     var matches = text.match(potential_end_pat);
