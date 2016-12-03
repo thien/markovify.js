@@ -13,6 +13,7 @@ class Chain {
             var sentences = splitters.split_into_sentences(data[i]);
             for (var n = 0; n < sentences.length; n++) {
                 var sentence = sentences[n].split(" ");
+                this.start.push(sentence[0]);
                 for (var k = 0; k < sentence.length; k++ ) {
                     var word = sentence[k];
                     var nextWord = "";
@@ -32,6 +33,7 @@ class Chain {
             }
         }
         console.log(this.corpus);
+        console.log(this.start);
     }
 }
 
