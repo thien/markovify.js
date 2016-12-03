@@ -52,30 +52,57 @@ function markov(chain){
 
 	// choose a start
 	var start_size = chain.start.length;
-	// console.log("the size of the starts is " + start_size);
+
 	var start_item = Math.floor((Math.random() * start_size) + 0);
 	key = chain.start[start_item];
 	var output = "";
 
 	while (key in chain.corpus){
 		output += key + " ";
-		// console.log(key);
+
 		if (chain.corpus[key]){
-			// output += key;
+
 			var rand_item = random(chain.corpus[key]);
-			// randomly choose it's key contents.
 			var key = chain.corpus[key][rand_item];
 		}
 	}
 	return output;
 }
 
-var test = [
-    "I am not a free man! I am a number!",
-    "Free the slaves",
-    "I am a number of things"
-];
+// var test = [
+//     "I am not a free man! I am a number!",
+//     "Free the slaves",
+//     "I am a number of things",
+//     "LOL XDXDXDXDXD",
+// 	"I JUST LITERALLY",
+// 	"PEED",
+// 	"MY",
+// 	"PANTS",
+// 	"JUST A LITTE THOUGH",
+// 	"I MEAN ITS A LITTLE SPOT NOT LIKE IT RUINED MY CHAIR R NYTHING LOL BUT FOR REAL EPIC LULZ HIGH FIVES XDDDDDDDDDDDDDD",
+// 	"U FRUSTRATED U FRUSTRATED BRO U SO MAD WHY ARE YOU SO MAAAAD I CAN POST ANYTHING I WANT THAT IS HOW IT SAYS IN THE RULES I DONT CARE ABOUT YOUR FAGGOTRY RULES Y SO MAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD",
+// 	"WHATA FUCK MAN xD i just fall of my chair kuz i couldnt and i CANT stop laugh xDXDXDXDXDDDDDDDDDDDDXXXXXXXXXXXXXXXXXXXDDDDDDDDDDDDDDDDDDD OMGOSH DDDDDXXXXXXXXXXXXXXXXXXXXXXXDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD DDDDDD LOOOOOOOOOLLLLL THIS IS A SHIT XDDDDDDDDDDDDDDDDDDDDXDDDDDDDDDDDDDDDDDDDDD A BIG ONE XDDDDDDDD A GRAT ONE XXXXXXDDDD CONGRATS MAN XD U FRUSTRATED U FRUSTRATED BRO U SO MAD WHY ARE YOU SO MAAAAD I CAN POST ANYTHING I WANT THAT IS HOW IT SAYS IN THE RULES I DONT CARE ABOUT YOUR FAGGOTRY RULES Y SO MAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD",
+// 	"WHATA FUCK MAN xD i just fall of my chair kuz i couldnt and i CANT stop laugh xDXDXDXDXDDDDDDDDDDDDXXXXXXXXXXXXXXXXXXXDDDDDDDDDDDDDDDDDDD OMGOSH DDDDDXXXXXXXXXXXXXXXXXXXXXXXDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD DDDDDD LOOOOOOOOOLLLLL THIS IS A SHIT hgXDDDDDDDDDDDDDDDDDDDDXDDDDDDDDDDDDDDDDDDDDD A BIG ONE XDDDDDDDD A GRAT ONE XXXXXXDDDD CONGRATS MAN XD",
+// 	"WHATA FUCK MAN xD i just fall of my chair kuz i couldnt and i CANT stop laugh",
+// 	"xDXDXDXDXDDDDDDDDDDDDXXXXXXXXXXXXXXXXXXXDDDDDDDDDDDDDDDDDDD OMGOSH",
+// 	"HOOOOOOOOLLLLLLYYYYY SHIT",
+// 	"whatr the HELL",
+// 	"WHATA FUCK MAN xD",
+// 	"i just fall of my chair kuz i couldnt and i CANT stop laugh",
+// 	"xDXDXDXDXDDDDDDDDDDDDXXXXXXXXXXXXXXXXXXXDDDDDDDDDDDDDDDDDDD",
+// 	"OMGOSH",
+// 	"DDDDDXXXXXXXXXXXXXXXXXXXXXXXDDDDDDDDDDDDDDDDDDDDDDDDDDDD DDDDDD LOOOOOOOOOLLLLL",
+// 	"THIS IS A SHIT",
+// 	"XDDDDDDDDDDDDDDDDDDDDXDDDDDDDDDDDDDDDDDDDDD",
+// 	"A BIG ONE",
+// 	"XDDDDDDDD",
+// 	"A GRAT ONE",
+// 	"XXXXXXDDDD."
+// ];
 
-var c = new Chain(test);
-var x = markov(c);
-console.log(x);
+// var c = new Chain(test);
+// var x = markov(c);
+// console.log(x);
+
+exports.Chain = Chain;
+exports.markov = markov;
