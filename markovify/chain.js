@@ -32,8 +32,8 @@ class Chain {
                 }
             }
         }
-        console.log(this.corpus);
-        console.log(this.start);
+        // console.log(this.corpus);
+        // console.log(this.start);
     }
 }
 
@@ -43,10 +43,9 @@ function markov(chain){
 
 	// choose a start
 	var start_size = chain.start.length;
-	// console.log("the size of the starts is " + start_size);
-	// var start_item = Math.floor((Math.random() * start_size) + 0);
-	// start_item = random(chain.start);
-	start_item = "I";
+	console.log("the size of the starts is " + start_size);
+	var start_item = Math.floor((Math.random() * start_size) + 0);
+	start_item = chain.start[start_item];
 
 	console.log("the chosen start item is " + start_item);
 	console.log(link(chain,start_item));
@@ -63,13 +62,11 @@ function random(value){
 
 function link(chain, key){
 	// check if key exists
-	console.log(chain.corpus.key);
-	if (chain.corpus.key){
-		console.log("key exists");
-		// get the size of the key's contents
-		// var key_size = chain.corpus[key].length;
-		// generate a number referring to a random index of the key's array.
-		// var rand_item = Math.floor((Math.random() * key_size) + 0);
+	// console.log("key:"+ key);
+	// console.log(chain.corpus[key]);
+	if (chain.corpus[key]){
+		// console.log("key exists");
+
 		var rand_item = random(chain.corpus[key]);
 		// randomly choose it's key contents.
 		var next = chain.corpus[key][rand_item];
