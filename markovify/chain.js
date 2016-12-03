@@ -43,11 +43,11 @@ function markov(chain){
 
 	// choose a start
 	var start_size = chain.start.length;
-	console.log("the size of the starts is " + start_size);
+	// console.log("the size of the starts is " + start_size);
 	var start_item = Math.floor((Math.random() * start_size) + 0);
 	start_item = chain.start[start_item];
 
-	console.log("the chosen start item is " + start_item);
+	// console.log("the chosen start item is " + start_item);
 	console.log(link(chain,start_item));
 }
 
@@ -64,6 +64,7 @@ function link(chain, key){
 	// check if key exists
 	// console.log("key:"+ key);
 	// console.log(chain.corpus[key]);
+	console.log(key);
 	if (chain.corpus[key]){
 		// console.log("key exists");
 
@@ -71,10 +72,10 @@ function link(chain, key){
 		// randomly choose it's key contents.
 		var next = chain.corpus[key][rand_item];
 
-		console.log(next);
+		// console.log(next);
 		link(chain,next);
 	} else {
-		console.log(key + " doesnt exist");
+		// console.log(key + " doesnt exist");
 		return key;
 	}
 }
