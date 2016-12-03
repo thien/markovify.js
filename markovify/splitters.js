@@ -48,17 +48,17 @@ function is_sentence_ender(word) {
 }
 
 function split_into_sentences(text) {
-    console.log("------")
+    // console.log("------")
     text = text.replace(/['"]+/g, '');
     if (text != ""){
-        text += ".";
-        console.log(text);
+        // text += ".";
+        // console.log(text);
         var matches = text.match(/[^.!?\s][^.!?]*(?:[.!?](?!['"]?\s|$)[^.!?]*)*[.!?]?['"]?(?=\s|$)/g);
         var sentences = [];
         for (var i = 0; i < matches.length; i++) {
             sentences.push(matches[i]);
         }
-        console.log(sentences);
+        // console.log(sentences);
         return sentences;
     }
     return text;
