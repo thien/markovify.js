@@ -48,14 +48,15 @@ function is_sentence_ender(word) {
 }
 
 function split_into_sentences(text) {
-    // console.log("------")
+    console.log("------")
     text = text.replace(/['"]+/g, '');
     if (text != ""){
         // text += ".";
-        // console.log(text);
+        console.log(text);
         var matches = text.match(/[^.!?\s][^.!?]*(?:[.!?](?!['"]?\s|$)[^.!?]*)*[.!?]?['"]?(?=\s|$)/g);
         var sentences = [];
-        if (typeof matches == undefined ){
+        // console.log(matches);
+        if (matches == null){
             return [""];
         } else {
             for (var i = 0; i < matches.length; i++) {

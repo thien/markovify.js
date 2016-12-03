@@ -80,5 +80,5 @@
     "url": "git+https://github.com/tnguyen/markovify.js.git"
   },
   "scripts": {},
-  "version": "0.0.3"
+  "version": "0.0.4"
 }
